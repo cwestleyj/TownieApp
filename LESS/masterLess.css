@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+}
+body,
+html {
+  height: 100%;
+}
+.topper {
+  background-image: url("../img/topHeaderBar.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+}
+.topper h1 {
+  font-size: 7em;
+  text-align: center;
+  margin: auto;
+  font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
+  text-shadow: 1px 2px 2px #080a0c;
+  -webkit-text-stroke: 1px white;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.topper h1 a {
+  text-decoration: none;
+  color: #faff82;
+  position: absolute;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(50%, rgba(211, 71, 68, 0)), to(#000000));
+  text-shadow: 0 2px 0 #040404;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+.topper h1:after {
+  color: #FF7D10;
+  content: attr(data-title);
+}
+.topper h3 {
+  margin: auto;
+  padding: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+.sub-header {
+  width: 60%;
+  height: 30%;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(162, 156, 166, 0.5);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+.sub-header i {
+  width: 1em;
+  height: 1em;
+  display: block;
+  cursor: pointer;
+}
+.sub-header i:hover {
+  bottom: 0;
+  color: red;
+  cursor: pointer;
+}
+#map {
+  height: 500px;
+  width: 600px;
+  margin: 0 auto;
+}

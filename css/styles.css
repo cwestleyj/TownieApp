@@ -1,0 +1,327 @@
+.rainbow-list:nth-child(7n+1) {
+  background: #74cc34;
+}
+.rainbow-list:nth-child(7n+2) {
+  background: #f9f022;
+}
+.rainbow-list:nth-child(7n+3) {
+  background: #ff9722;
+}
+.rainbow-list:nth-child(7n+4) {
+  background: #ff392a;
+}
+.rainbow-list:nth-child(7n+5) {
+  background: #d100d1;
+}
+.rainbow-list:nth-child(7n+6) {
+  background: #00cde6;
+}
+.rainbow-list:nth-child(7n+7) {
+  background: #6b13ef;
+}
+.rainbow-list:hover:nth-child(7n+1) {
+  background: #EF746F;
+}
+.rainbow-list:hover:nth-child(7n+2) {
+  background: #A8E6CE;
+}
+.rainbow-list:hover:nth-child(7n+3) {
+  background: #AB3E5B ;
+}
+.rainbow-list:hover:nth-child(7n+4) {
+  background: #fff46e;
+}
+.rainbow-list:hover:nth-child(7n+5) {
+  background: #FFBE40;
+}
+.rainbow-list:hover:nth-child(7n+6) {
+  background: #ECF081 ;
+}
+.rainbow-list:hover:nth-child(7n+7) {
+  background: #B3CC57;
+}
+.hover-shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotateZ(-5deg);
+  }
+}
+.wiggle {
+  animation: wiggle 1.8s, linear;
+  animation-iteration-count: infinite;
+}
+* {
+  margin: 0;
+}
+body,
+html {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 * {
+  font-family: 'Quicksand', sans-serif;
+  padding: 20px;
+}
+.topper {
+  background-image: url("../img/topHeaderBar.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+.topper .row {
+  width: 100%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.topper #logo {
+  position: fixed;
+  flex-direction: column;
+  height: 20%;
+  right: 0;
+}
+.topper #logo:hover {
+  animation: wiggle 1.8s, linear;
+  animation-iteration-count: infinite;
+}
+.topper h1 {
+  font-size: 4em;
+  text-align: center;
+  margin: auto;
+  text-shadow: 1px 3px 5px #080a0c;
+  font-family: 'Asap', sans-serif;
+}
+.topper h1 a {
+  text-decoration: none;
+  color: #ffa414;
+  position: absolute;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(80%, rgba(211, 71, 68, 0)), to(#000000));
+  text-shadow: 0 1px 0 #fca501;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+.topper h1:after {
+  color: #faa301;
+  content: attr(data-title);
+  font-family: 'Asap', sans-serif;
+}
+.topper h3 {
+  margin: auto;
+  padding: 20px;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+.sub-header {
+  width: 60%;
+  height: auto;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(240, 255, 66, 0.26);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  border: solid 0.5px;
+  box-shadow: -2px 2px 1px #000000;
+  font-family: 'Quicksand', sans-serif;
+}
+.sub-header i {
+  width: 1em;
+  height: 1em;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  color: #ff2e33;
+  animation: wiggle 1.8s, linear;
+  animation-iteration-count: infinite;
+}
+.sub-header i:hover {
+  bottom: 0;
+  color: #ff1f3d;
+  cursor: pointer;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+.sub-header i:active {
+  color: #ff0008;
+}
+#map {
+  height: 500px;
+  width: 600px;
+  margin: 0 auto;
+}
+#sketchpadSection {
+  height: 100%;
+  background-image: url("../img/food.png");
+  -webkit-background-size: contain;
+  background-size: contain;
+  display: flex;
+  flex-direction: row;
+}
+#sketchpadSection i {
+  display: none;
+  cursor: pointer;
+  text-align: center;
+  color: #ff2e33;
+  animation: wiggle 1.8s, linear;
+  animation-iteration-count: infinite;
+}
+#sketchpadSection i:hover {
+  color: #ff1f3d;
+  cursor: pointer;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+#sketchpadSection i:active {
+  color: #ff0008;
+}
+#sketchpadSection .sketch-tools {
+  margin: auto;
+  padding: 10px;
+}
+#sketchpadSection section {
+  text-align: center;
+  margin: auto;
+}
+#sketchpadSection section p {
+  font-family: 'Quicksand', sans-serif;
+}
+#sketchpadSection #sketch-copy {
+  flex: 2;
+  margin: auto;
+  text-align: center;
+}
+#sketchpadSection #sketch-copy h2 {
+  text-align: center;
+  margin: auto;
+  float: right;
+}
+#sketchpadSection #sketch-copy h2:after {
+  clear: both;
+}
+#sketchpadSection #sketchWidget {
+  padding: 20px;
+  height: 100%;
+  margin: auto;
+}
+#sketchpadSection #sketchWidget canvas {
+  border: 5px solid;
+  background-color: white;
+  border-radius: 5px;
+  flex: 1;
+}
+#sketchpadSection #sketchWidget canvas:hover {
+  cursor: url("../img/paintCursor.cur"), pointer;
+}
+#sketchpadSection #drawingBrowser {
+  background-color: green;
+}
+#drawingListing {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%
+  overflow:scroll;
+}
+#drawingListing li {
+  height: 100%;
+  width: 300px;
+}
+#drawingShowcase {
+  margin: auto;
+}
+#drawingShowcase img {
+  border: 5px groove saddlebrown;
+  background-color: white;
+}
+.paintings {
+  flex: 1;
+  text-align: center;
+  background-color: #ff6749;
+  margin: 10px;
+  border-radius: 10px;
+  list-style-type: none;
+  font-family: 'Quicksand', sans-serif;
+}
+.paintings:nth-child(7n+1) {
+  background: #74cc34;
+}
+.paintings:nth-child(7n+2) {
+  background: #f9f022;
+}
+.paintings:nth-child(7n+3) {
+  background: #ff9722;
+}
+.paintings:nth-child(7n+4) {
+  background: #ff392a;
+}
+.paintings:nth-child(7n+5) {
+  background: #d100d1;
+}
+.paintings:nth-child(7n+6) {
+  background: #00cde6;
+}
+.paintings:nth-child(7n+7) {
+  background: #6b13ef;
+}
+.paintings li {
+  font-family: 'Quicksand', sans-serif;
+}
+.paintings:hover {
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+}
+#gallery {
+  text-align: center;
+  background-image: url("../img/weather.png");
+}
+#mapSection {
+  background-image: url("../img/pw_maze_white_@2X.png");
+  background-color: green;
+  height: 100%;
+  text-align: center;
+}

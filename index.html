@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Townie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans|Quicksand|Asap' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+
+<div class="topper">
+    <div class="row">
+        <a id="returnTop" href="#">
+            <img id="logo" src="img/webIcon.svg"></a>
+
+        <h1 data-title="Townie">
+            <a href="#">Townie</a>
+        </h1>
+    </div>
+    <div class="sub-header">
+        <h3>Draw anonomously! We'll geotag your drawing so you can see others in your area. <br/> Bars, parks, even in
+            your own home; Be a Townie. </h3>
+
+        <p>Click the Arrow or Scroll to draw your own </p>
+        <i id="arrow" class=" fa fa-arrow-circle-down fa-3x" aria-hidden="true"><br/></i></h2>
+    </div>
+
+</div>
+
+
+<div id="sketchpadSection">
+    <div id="sketchWidget">
+        <canvas id="sketchpad" width="600" height="300"></canvas>
+
+        <div class="sketch-tools">
+            <input id="colorpicker" type="color"/>
+            <input id="sizepicker" type="range" max="15" min="3" value="5"/>
+            <button id="btnSave">Save Drawing</button>
+        </div>
+
+
+    </div>
+    <section id="sketch-copy">
+        <h2>Paint us a pretty picture. When you're done, hit Save Drawing. We'll geotag it and add it to your city's
+            collection!
+            <i id="arrow2" class=" fa fa-arrow-circle-down fa-2x" aria-hidden="true"><br/></i></h2>
+    </section>
+</div>
+
+<div id="gallery">
+    <h1> Gallery</h1>
+    <h2>Click on an entry to view the piece!</h2>
+    <div id="drawingBrowser">
+        <div id="drawingShowcase"></div>
+        <div id="drawingListing"></div>
+    </div>
+</div>
+
+
+<div class="content">
+
+
+
+            <div id="mapSection">
+
+
+        <h1> Click on a pin to see drawings in your town.</h1>
+                <div>
+                    <select id="timeSpan">
+                        <option value="last3days">Last 3 Days</option>
+                        <option value="last7days">Past Week</option>
+                        <option value="last30days">Past Month</option>
+                    </select>
+                    <br>
+        <div id="map">
+
+        </div>
+
+    </div>
+        </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="js/jqueryUI.js"></script>
+<script src="https://npmcdn.com/dexie/dist/dexie.min.js"></script>
+<script src="http://intridea.github.com/sketch.js/lib/sketch.js"></script>
+<script src="js/sketch.js"></script>
+<script src="js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFZAvvJKNjKaioxWyvgYxQy-5v-VHk9qM&callback=initMap" async
+        defer></script>
+</body>
+</html>

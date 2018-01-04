@@ -1,0 +1,266 @@
+@import "mixins";
+
+* {
+  margin: 0
+}
+
+body, html {
+  height: 100%;
+
+}
+
+h1, h2, h3, h4, h5, h6 * {
+  font-family: 'Quicksand', sans-serif;
+  padding:20px;
+}
+
+.topper {
+  background-image: url("../img/topHeaderBar.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+
+  .row {
+    width:100%;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+  }
+  #logo {
+    position: fixed;
+    flex-direction: column;
+    height: 20%;
+    right:0;
+
+  }
+
+  #logo:hover{
+    .wiggle;
+  }
+
+  h1 {
+
+    font-size: 4em;
+    text-align: center;
+    margin: auto;
+    text-shadow: 1px 3px 5px #080a0c;
+    font-family: 'Asap', sans-serif;
+
+    a {
+      text-decoration: none;
+      color: #ffa414;
+      position: absolute;
+      -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), color-stop(80%, rgba(211, 71, 68, 0)), to(rgb(0, 0, 0)));
+      text-shadow: 0 1px 0 #fca501;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      transition: all .3s;
+    }
+
+  }
+  h1:after {
+    color: #faa301;
+    content: attr(data-title);
+    font-family: 'Asap', sans-serif;
+  }
+
+  h3 {
+    margin: auto;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+
+  }
+}
+
+.sub-header {
+  width: 60%;
+  height: auto;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(240, 255, 66, 0.26);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  border: solid 0.5px;
+  box-shadow: -2px 2px 1px black;
+  font-family: 'Quicksand', sans-serif;
+
+  i {
+    width: 1em;
+    height: 1em;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    color: #ff2e33;
+    .wiggle;
+
+  }
+
+  i:hover {
+    bottom: 0;
+    color: #ff1f3d;
+    cursor: pointer;
+    .hover-shake;
+
+  }
+
+  i:active {
+    color: #ff0008;
+  }
+}
+
+#map {
+  height: 500px;
+  width: 600px;
+  margin: 0 auto;
+}
+
+
+#sketchpadSection {
+  height: 100%;
+  background-image:url("../img/food.png");
+  -webkit-background-size: contain;
+  background-size: contain;
+  display:flex;
+  flex-direction: row;
+
+  i {
+    display:none;
+    cursor: pointer;
+    text-align: center;
+    color: #ff2e33;
+    .wiggle;
+
+  }
+
+  i:hover {
+
+
+    color: #ff1f3d;
+    cursor: pointer;
+    .hover-shake;
+
+  }
+
+  i:active {
+    color: #ff0008;
+  }
+  .sketch-tools {
+    margin:auto;
+    padding:10px;
+  }
+  //
+  section {
+    text-align: center;
+    margin:auto;
+
+    p {
+      font-family: 'Quicksand', sans-serif;
+    }
+  }
+
+  #sketch-copy{
+    flex:2;
+    margin:auto;
+    text-align: center;
+    h2 {
+      text-align: center;
+      margin:auto;
+      float:right;
+    }
+    h2:after{
+      clear:both;
+    }
+  }
+
+
+  #sketchWidget {
+    padding:20px;
+    height:100%;
+
+    margin:auto;
+
+    canvas {
+      border: 5px solid;
+      background-color:white;
+      border-radius:5px;
+      flex:1
+    }
+    canvas:hover {
+      cursor: url("../img/paintCursor.cur"), pointer;
+
+    }
+  }
+
+  #drawingBrowser {
+    background-color:green;
+
+  }
+}
+
+#drawingListing {
+  display:flex;
+  flex-wrap: wrap;
+  height:100%
+  overflow:scroll;
+  li {
+    height:100%;
+    width:300px;
+  }
+
+}
+
+#drawingShowcase {
+  margin:auto;
+
+  img {
+    border:5px groove saddlebrown;
+    background-color:white;
+  }
+}
+
+
+.paintings {
+  .rainbow-list;
+  .rainbow-list:hover{};
+  flex:1;
+  text-align: center;
+  background-color: #ff6749;
+  margin:10px;
+  border-radius:10px;
+  list-style-type: none;
+  font-family: 'Quicksand', sans-serif;
+  li {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+
+}
+
+.paintings:hover {
+  cursor:pointer;
+  color:inherit;
+  opacity:0.7;
+
+}
+
+#gallery {
+  text-align:center;
+  background-image:url("../img/weather.png");
+
+}
+
+#mapSection{
+  background-image:url("../img/pw_maze_white_@2X.png");
+  background-color:green;
+  height:100%;
+  text-align: center;
+}

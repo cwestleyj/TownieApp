@@ -1,0 +1,95 @@
+.rainbow-list {
+  &:nth-child(7n+1) {
+    background: #74cc34;
+  }
+  &:nth-child(7n+2) {
+    background: #f9f022;
+  }
+  &:nth-child(7n+3) {
+    background: #ff9722;
+  }
+
+  &:nth-child(7n+4) {
+    background: #ff392a;
+  }
+  &:nth-child(7n+5) {
+    background: #d100d1;
+  }
+  &:nth-child(7n+6) {
+    background: #00cde6;
+  }
+  &:nth-child(7n+7) {
+    background: #6b13ef;
+
+  }
+}
+
+.rainbow-list:hover {
+  &:nth-child(7n+1) {
+    background: #EF746F;
+  }
+  &:nth-child(7n+2) {
+    background: #A8E6CE;
+  }
+  &:nth-child(7n+3) {
+    background:#AB3E5B ;
+  }
+
+  &:nth-child(7n+4) {
+    background: #fff46e;
+  }
+  &:nth-child(7n+5) {
+    background: #FFBE40;
+  }
+  &:nth-child(7n+6) {
+    background:#ECF081 ;
+  }
+  &:nth-child(7n+7) {
+    background: #B3CC57;
+
+  }
+}
+.hover-shake {
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(5deg)
+  }
+
+  100% {
+    transform: rotateZ(-5deg);
+  }
+
+}
+
+  .wiggle {
+    animation: wiggle 1.8s, linear;
+    animation-iteration-count: infinite;
+  }
